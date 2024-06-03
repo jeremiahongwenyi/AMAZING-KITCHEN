@@ -35,9 +35,18 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+                 
+                ],
+            "scripts": [
+              
+              "./node_modules/bootstrap/dist/js/bootstrap.min.js"
             ],
-            "scripts": [],
+              
+          
+          
             "server": "src/main.server.ts",
             "prerender": true,
             "ssr": {
@@ -106,5 +115,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "02c3c027-d67a-45cf-ada5-1e3b9b8b783b"
   }
 }

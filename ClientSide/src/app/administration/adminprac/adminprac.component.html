@@ -1,0 +1,139 @@
+<section class="container" [ngClass]="{'invalid':signUpForm.status=='INVALID','valid':signUpForm.status=='VALID'}">
+    <header>Product Management</header>
+  
+    <form class="form" [formGroup]="signUpForm" (ngSubmit)="onSubmitForm()">
+      
+
+       <div class="column">
+        <p><strong>Choose Action</strong> <span style="color: red;">*</span></p>
+        <div class="input-box">
+            <select formControlName="action">
+                <option value="utensils">ADD</option>
+                <option value="cookware">INQUIRE</option>
+                <option value="bakeware">MODIFY</option>
+                <option value="foodstorage">DELETE</option>  
+            </select>
+            <small 
+            *ngIf="signUpForm.controls['action'].invalid && signUpForm.controls['action'].touched"
+            >Last name is a required field.</small>
+            </div>
+       </div>
+
+
+    <div class="column">
+      <div class="input-box">
+           <label for=""><strong>Category </strong><span style="color: red;">*</span></label>
+            <select formControlName="category">
+                <option value="utensils">Utensils</option>
+                <option value="cookware">Cook Ware</option>
+                <option value="bakeware">Bakeware</option>
+                <option value="foods torage">Food Storage</option>
+                <option value="grilling&roasting">Grilling&Roasting</option>
+                <option value="bakeware">Bakeware</option>
+                <option value="curtlery">Curtlery</option>
+            </select>
+          <small 
+          *ngIf="signUpForm.get('category').errors?.['noSpaceValidator'] && signUpForm.controls['category'].touched"
+          >No space is allowed for first name.</small>
+        </div>
+
+        <div class="input-box">
+            <label for=""><strong>Sub-Category</strong> <span style="color: red;">*</span></label>
+            <select formControlName="subcategory">
+                <option value="plates">Plates</option>
+                <option value="cups">Cups</option>
+                <option value="glasses">Glasses</option>
+                <option value="curtlery">Curtlery</option>  
+            </select>
+          <small 
+          *ngIf="signUpForm.controls['subcategory'].invalid && signUpForm.controls['subcategory'].touched"
+          >Last name is a required field.</small>
+          </div>
+
+          <div class="input-box">
+            <label for=""><strong>Item-ID</strong> <span style="color: red;">*</span></label>
+            <input type="text" placeholder="Item id"  formControlName="itemid"/>
+          <small 
+          *ngIf="signUpForm.controls['itemid'].invalid && signUpForm.get('itemid')['touched']"
+          >Last name is a required field.</small>
+          </div>
+      </div>    
+
+
+
+
+      <div class="column">
+        <div class="input-box">
+                <label for=""><strong>Product Name</strong> <span style="color: red;">*</span></label>
+                <input type="text" placeholder="Product Name"  formControlName="productname"/>
+              <small 
+              *ngIf="signUpForm.controls['productname'].invalid && signUpForm.controls['productname'].touched"
+              >Last name is a required field.</small>
+        </div>
+
+        <div class="input-box">
+            <label for=""><strong>Image</strong> <span style="color: red;">*</span></label>
+            <input type="text" placeholder="Image path"  formControlName="image"/>
+          <small 
+          *ngIf="signUpForm.controls['image'].invalid && signUpForm.controls['image'].touched"
+          >Last name is a required field.</small>
+    </div>
+    </div>
+
+
+
+
+    <div class="column">
+        <div class="input-box">
+                <label for=""><strong>Quantity</strong> <span style="color: red;">*</span></label>
+                <input type="text" placeholder="Quantity"  formControlName="quantity"/>
+              <small 
+              *ngIf="signUpForm.controls['quantity'].invalid && signUpForm.controls['quantity'].touched"
+              >Last name is a required field.</small>
+        </div>
+
+        <div formGroupName="price">
+            <div class="input-box">
+                <label for=""><strong>Price</strong> <span style="color: red;">*</span></label>
+                <input type="text" placeholder="Price"  formControlName="amount"/>
+              <!-- <small 
+              *ngIf="signUpForm.controls['price.amount'].invalid && signUpForm.controls['price.amount'].touched"
+              >Last name is a required field.</small> -->
+        </div>
+    
+        <div class="input-box">
+            <label for=""><strong>Specification</strong> <span style="color: red;">*</span></label>
+            <input type="text" placeholder="Specify per item or box"  formControlName="specification"/>
+          <!-- <small 
+          *ngIf="signUpForm.controls['specification'].invalid && signUpForm.controls['specification'].touched"
+          >Last name is a required field.</small> -->
+        </div>
+        </div>
+
+    </div>
+
+
+
+    <div class="column">
+        <div class="input-box">
+            <label for=""><strong>Description</strong> <span style="color: red;">*</span></label>
+            <!-- <input type="text" placeholder="Describe the product"  formControlName="email"/> -->
+            <textarea formControlName="description" id=""></textarea>
+            <small 
+              *ngIf="signUpForm.controls['description'].invalid && signUpForm.controls['description'].touched"
+              >Please enter a valid email address.</small>
+          </div>
+
+          <div class="input-box">
+            <label for=""><strong>Discount</strong> <span style="color: red;">*</span></label>
+            <input type="text" placeholder="Product Discount"  formControlName="discount"/>
+            <small 
+              *ngIf="signUpForm.controls['discount'].invalid && signUpForm.controls['discount'].touched"
+              >Please enter a valid email address.</small>
+          </div>
+    </div>
+        <input type="submit" value="Submit" class="submit-btn">
+      
+      </form>
+  
+    </section>

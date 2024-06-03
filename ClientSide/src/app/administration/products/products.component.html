@@ -1,0 +1,38 @@
+
+<app-product-detail *ngIf="showProductDetail"
+(closeProductDetailComponent)="hideDetail($event)"
+[productId]="selectedItemId"
+[productDetail]="selectedProductDetail"
+[selectedProduct]="selectedProduct"></app-product-detail>
+<div class="container">
+
+    <h1 class="heading">Trending Products</h1>
+  
+    <div class="box-container">
+  
+        <div class="box"  *ngFor="let item of filteredData" (click)="productContainerClicked(item)">
+            <div [ngClass]="{'instock':item.available>itemsinCart,'outofstock':item.available<=itemsinCart}">
+                {{item.available>itemsinCart? 'In Stock': 'Out Of Stock'}}</div> 
+                <span *ngIf="item.available-itemsinCart<=10">{{item.available-itemsinCart}}</span>
+                
+            <img src="{{item.image}}" routerLink="/product-details/{{item._id}}">
+            <h3>{{item.name}}</h3>
+            <p>Price: Ksh {{item.price.pri}} {{item.price.specification}}</p>
+            <p>{{item.color}}</p>
+           
+            <!-- <a routerLink="/product-details/{{item._id}}" class="btn">Add to Cart</a> -->
+            
+            <!-- <div class="task-action-icons">
+                <button class="task-action-btn" title="Detail" (click)="showDetails({itemid:item.itemId,itemDesc:item.description})">
+                    <i class="fa fa-info-circle" aria-hidden="true">Detail</i>
+                </button>
+            </div> -->
+        </div>
+  
+    </div>
+  
+  </div>
+
+
+  
+

@@ -1,0 +1,53 @@
+<div class="overlay">
+	<div class="popup">
+        <h2></h2>
+        <hr>
+		<button class="close" href="#" (click)="closeProductDetail()">&times;</button>
+		<div class="content">
+			<section class="container">
+                <!-- <h3>Description</h3> -->
+                <p>{{selectedProduct().description}}</p>
+                <!-- <p>
+                    {{productDetail? productDetail:null}}
+                </p> -->
+        <!-- <div class="box"  *ngFor="let item of shopProducts">
+            <div [ngClass]="{'instock':item.available>itemsinCart,'outofstock':item.available<=itemsinCart}">
+                {{item.available>itemsinCart? 'In Stock': 'Out Of Stock'}}</div> 
+                <span *ngIf="item.available-itemsinCart<=10">{{item.available-itemsinCart}}</span>
+        </div> -->
+
+                <div style="display: flex; margin-top: 20px;">
+                    <div style="width: 50%;">
+                        <!-- <strong>Assigned To: </strong> -->
+                        <div class="chair-price">
+                            <!-- <strong>250€</strong> -->
+                            <button (click)="decreamentCartValue()">-</button>
+                            <span>{{itemsinCart}}</span>
+                            <button (click)="increamentCartValue()">+</button>
+                  
+                            <a href="#" class="btn btn--small">Add to cart</a>
+                  
+                          </div>
+                    </div>
+                    <div style="width: 50%;">
+                        <!-- <strong>Created At: </strong> -->
+                        <!-- <p>{{selectedProduct()}}</p> -->
+                      
+                    </div>
+                </div>
+                <div style="display: flex; margin-top: 20px;">
+                    <div style="width: 50%;">
+                        <!-- <strong>Priority: </strong> -->
+                       
+                    </div>
+                    <div style="width: 50%;">
+                        <!-- <strong>Current Status: </strong> -->
+                       
+                    </div>
+                </div>
+            </section>
+		</div>
+	</div>
+</div>
+
+

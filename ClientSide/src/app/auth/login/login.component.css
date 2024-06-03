@@ -1,0 +1,57 @@
+.app-login-form{
+    width: 520px;
+    height: 360px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    padding: 30px 30px;
+    border-radius: 10px;
+    margin: 75px auto;
+}
+.form-input{
+    margin-top: 10px;
+}
+.form-input input{
+    text-align: center;
+    width: 60%;   
+    height: 40px; 
+    border: #eee 2px solid;
+    padding: 5px 20px;
+    border-radius: 4%;
+    margin-left: 80px;
+    margin-bottom: 15px;
+    
+}
+.app-login-btn{
+    width: 40%;
+    border: none;
+    padding: 7px ;
+    margin: 10px 0px;
+    background-color: #bd3636;
+    color: white;
+    margin-left: 130px;
+}
+.app-toggle-btn{
+    border: none;
+    font-size: 16px;
+    background-color: transparent;
+    color: #0e0ede;
+    cursor: pointer;
+}
+
+h2 {
+    margin-bottom: 20px;
+    text-align: center;
+ font-family: "Gentium Book Plus", serif;
+  font-weight: 400;
+   font-style: normal;
+   color: #ad0505;
+}
+
+p {
+    margin-left: 80px;
+    
+    font-size: 13px;
+}
+
+.forgot{
+    color: #0e0ede;
+}
