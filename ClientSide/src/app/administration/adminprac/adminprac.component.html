@@ -8,10 +8,10 @@
         <p><strong>Choose Action</strong> <span style="color: red;">*</span></p>
         <div class="input-box">
             <select formControlName="action">
-                <option value="utensils">ADD</option>
-                <option value="cookware">INQUIRE</option>
-                <option value="bakeware">MODIFY</option>
-                <option value="foodstorage">DELETE</option>  
+                <option value="ADD">ADD</option>
+                <option value="INQUIRE">INQUIRE</option>
+                <option value="MODIFY">MODIFY</option>
+                <option value="DELETE">DELETE</option>  
             </select>
             <small 
             *ngIf="signUpForm.controls['action'].invalid && signUpForm.controls['action'].touched"
@@ -23,7 +23,7 @@
     <div class="column">
       <div class="input-box">
            <label for=""><strong>Category </strong><span style="color: red;">*</span></label>
-            <select formControlName="category">
+            <select formControlName="category" (change)="onSelectCategory($event)" >
                 <option value="utensils">Utensils</option>
                 <option value="cookware">Cook Ware</option>
                 <option value="bakeware">Bakeware</option>
@@ -40,10 +40,8 @@
         <div class="input-box">
             <label for=""><strong>Sub-Category</strong> <span style="color: red;">*</span></label>
             <select formControlName="subcategory">
-                <option value="plates">Plates</option>
-                <option value="cups">Cups</option>
-                <option value="glasses">Glasses</option>
-                <option value="curtlery">Curtlery</option>  
+              <!-- <option value="" disabled selected>Select a sub-category</option> -->
+                <option [value]="subcategory" *ngFor="let subcategory of subcategoriesDisplayed">{{subcategory}}</option>
             </select>
           <small 
           *ngIf="signUpForm.controls['subcategory'].invalid && signUpForm.controls['subcategory'].touched"
@@ -68,7 +66,7 @@
                 <input type="text" placeholder="Product Name"  formControlName="productname"/>
               <small 
               *ngIf="signUpForm.controls['productname'].invalid && signUpForm.controls['productname'].touched"
-              >Last name is a required field.</small>
+              >Password must contain an uppercase,lowercase, number and a special character</small>
         </div>
 
         <div class="input-box">
@@ -86,7 +84,7 @@
     <div class="column">
         <div class="input-box">
                 <label for=""><strong>Quantity</strong> <span style="color: red;">*</span></label>
-                <input type="text" placeholder="Quantity"  formControlName="quantity"/>
+                <input type="number" placeholder="Quantity"  formControlName="quantity"/>
               <small 
               *ngIf="signUpForm.controls['quantity'].invalid && signUpForm.controls['quantity'].touched"
               >Last name is a required field.</small>
@@ -95,19 +93,24 @@
         <div formGroupName="price">
             <div class="input-box">
                 <label for=""><strong>Price</strong> <span style="color: red;">*</span></label>
-                <input type="text" placeholder="Price"  formControlName="amount"/>
+                <input type="number" placeholder="Price"  formControlName="amount"/>
               <!-- <small 
               *ngIf="signUpForm.controls['price.amount'].invalid && signUpForm.controls['price.amount'].touched"
               >Last name is a required field.</small> -->
         </div>
     
+       <div class="column">
         <div class="input-box">
-            <label for=""><strong>Specification</strong> <span style="color: red;">*</span></label>
-            <input type="text" placeholder="Specify per item or box"  formControlName="specification"/>
-          <!-- <small 
-          *ngIf="signUpForm.controls['specification'].invalid && signUpForm.controls['specification'].touched"
-          >Last name is a required field.</small> -->
-        </div>
+          <label for=""><strong>Specification</strong> <span style="color: red;">*</span></label>
+          <select   formControlName="specification">
+            <option value="per box">Per Box</option>
+            <option value="per item">Per Item</option>
+          </select>
+        <!-- <small 
+        *ngIf="signUpForm.controls['specification'].invalid && signUpForm.controls['specification'].touched"
+        >Last name is a required field.</small> -->
+      </div>
+       </div>
         </div>
 
     </div>

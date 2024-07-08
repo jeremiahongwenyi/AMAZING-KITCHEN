@@ -15,10 +15,10 @@
                 {{item.available>itemsinCart? 'In Stock': 'Out Of Stock'}}</div> 
                 <span *ngIf="item.available-itemsinCart<=10">{{item.available-itemsinCart}}</span>
                 
-            <img src="{{item.image}}" routerLink="/product-details/{{item._id}}">
+            <img src="{{item.image}}" routerLink="/product-details/{{item.itemId}}">
             <h3>{{item.name}}</h3>
-            <p>Price: Ksh {{item.price.pri}} {{item.price.specification}}</p>
-            <p>{{item.color}}</p>
+            <p>Price: Ksh {{item.price.amount}} {{item.price.specification}}</p>
+            <p>{{item.description}}</p>
            
             <!-- <a routerLink="/product-details/{{item._id}}" class="btn">Add to Cart</a> -->
             

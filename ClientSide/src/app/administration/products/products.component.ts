@@ -22,8 +22,8 @@ export class ProductsComponent implements OnInit,OnDestroy {
     effect(()=> {console.log(this.selectedProduct())})
   }
 
-  shopProducts:any[]=[]
-  filteredData:any[]=[]
+  shopProducts:Product[]=[]
+  filteredData:Product[]=[]
   showProductDetail:boolean = false;
   selectedItemId:number = 0;
   selectedProductDetail:string='';
@@ -36,8 +36,14 @@ export class ProductsComponent implements OnInit,OnDestroy {
 
   ngOnInit(): void {
 
-    this.shopProducts=this.productService.shopProducts;
-    this.filteredData=this.productService.shopProducts;
+  this.productService.getProducts().subscribe({
+      next: (data)=> {
+      console.log(data)
+      this.shopProducts = data;
+      this.filteredData = data;
+      }
+    });
+   
 
     // const param = this.activatedRoute.snapshot.paramMap.get('subcategory')
     // this.shopProducts = this.shopProducts.filter( (product)=> product.subCategory.toLowerCase()==param?.toLowerCase())
@@ -73,15 +79,13 @@ export class ProductsComponent implements OnInit,OnDestroy {
     this.showProductDetail=action
   }
 
-  productContainerClicked(itemid:any){
-    console.log(itemid)
-    this.selectedProduct.set(itemid);
+  productContainerClicked(item:any){
+    console.log(item)
+    this.selectedProduct.set(item);
     console.log(this.selectedProduct)
     this.showProductDetail= true
 
   }
-
-
 
 ngOnDestroy(): void {
     this.observable.unsubscribe()

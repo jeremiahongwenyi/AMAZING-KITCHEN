@@ -20,10 +20,10 @@
         public category:string,
         public subCategory:string,
         public description:string,
-        public price: {pri:number,specification?:string},
-        public discount:number,
+        public price: {amount:number,specification?:string},
         public image:string,
         public available:number,
+        public discount?:number,
 
       ){}
 
