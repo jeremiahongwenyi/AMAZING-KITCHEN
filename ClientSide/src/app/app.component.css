@@ -1,4 +1,5 @@
-.container{
+
+/* .container{
     position: fixed;
     top: 0;
     left: 0;
@@ -8,29 +9,30 @@
     height: 100vh;
     background-size: cover;
     background-position: center;
-    overflow: hidden; /* Ensures the overlay doesn't extend outside the container */
-}
+    overflow: hidden; 
+} */
 
-.overlay {
+/* .overlay {
     position: absolute;
     top: 0;
     left: 0;
     bottom: 0;
     right: 0;
-    background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent white */
-    backdrop-filter: blur(5px); /* Apply blur effect */
-    z-index: 1; /* Ensure the overlay is above the background image but below the content */
-}
+    background-color: rgba(255, 255, 255, 0.5); 
+    backdrop-filter: blur(5px); 
+    z-index: 1; 
+} */
 
 
 
-.app-login {
+/* .app-login {
     position: relative;
-    z-index: 2; /* Ensure the login component is above the overlay */
-}
+    z-index: 2; 
+} */
 
 .containerr{
-    background:linear-gradient(45deg, blueviolet, lightgreen);
-    padding:15px 9%;
+    /* background:linear-gradient(45deg, blueviolet, lightgreen); */
+    background: #fff;
+    padding:15px 0px;
     padding-bottom: 100px;
 }

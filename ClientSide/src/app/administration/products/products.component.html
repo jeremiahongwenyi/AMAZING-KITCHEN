@@ -11,9 +11,9 @@
     <div class="box-container">
   
         <div class="box"  *ngFor="let item of filteredData" (click)="productContainerClicked(item)">
-            <div [ngClass]="{'instock':item.available>itemsinCart,'outofstock':item.available<=itemsinCart}">
+            <!-- <div [ngClass]="{'instock':item.available>itemsinCart,'outofstock':item.available<=itemsinCart}">
                 {{item.available>itemsinCart? 'In Stock': 'Out Of Stock'}}</div> 
-                <span *ngIf="item.available-itemsinCart<=10">{{item.available-itemsinCart}}</span>
+                <span *ngIf="item.available-itemsinCart<=10">{{item.available-itemsinCart}}</span> -->
                 
             <img src="{{item.image}}" routerLink="/product-details/{{item.itemId}}">
             <h3>{{item.name}}</h3>

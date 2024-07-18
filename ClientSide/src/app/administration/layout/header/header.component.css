@@ -1,0 +1,120 @@
+.navbar{
+    background-color: #0da8e4;
+    color: black;
+    padding:5px 30px ;
+    display: flex;
+    position: relative;
+    gap: 400px;
+    /* justify-content: space-between; */
+}
+
+
+.navbar__brand{
+    font-size: 32px;
+    font-weight: 800;
+    margin-bottom: 0;
+    color: rgb(129, 9, 129);
+    /* text-shadow: 0 5px 10px rgba(0,0,0,.2); */
+    margin-top: 5px;
+
+    /* color: #fff; */
+}
+
+.navbar__subbrand{
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: normal;
+    display: inline-block;
+    font-style: italic;
+    color: aliceblue;
+    margin-left: 25px;
+    margin-top: 0px;
+    margin-bottom: 30px;
+    animation: scrolldown 5s ease-in-out;
+}
+
+.navbar__search{
+margin-top: 80px;
+position: absolute;
+top: 0;
+right: 530px;
+
+}
+.navbar__search__input{
+    border-radius: 10px;
+    border: solid ;
+    padding: 5px;
+    display: inline-block;
+    width:250px;
+    height: 35px;
+}
+.navbar__search__button{
+    padding: 5px;
+   /* background-color: blue; */
+   position: relative;
+   right: 30px;
+  
+}
+
+.content{
+    display: flex;
+    flex: 1;
+    margin-top: 0px;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-top: 20px;
+}
+
+.icons{
+display: flex;
+gap: 20px;
+}
+.navbar__elements{
+    display: flex;
+    gap: 10px;
+}
+
+
+.navbar__elements .link {
+    color: black;
+    text-decoration: none;
+    text-transform: uppercase;
+    display: inline-block;
+  }
+  
+  
+  .navbar__elements .link:visited {
+    color: black;
+    text-decoration: none;
+  }
+  
+
+  .navbar__elements .link:hover {
+    color: white;
+    font-size: 18px;
+    border: 1px solid white;
+    border-radius: 10px 10px 10px 10px;
+    /* background-color: black; */
+    /* padding: 10px; */
+  }
+  
+ 
+  .navbar__elements .link:active {
+    color: red;
+  }
+  
+
+  .navbar__elements .link:focus {
+    color: white;
+   font-weight: bold;
+   text-decoration: none;
+
+  }
+
+  @keyframes scrolldown {
+    0% {transform: translate(0%); font-size: 16px; color: white; }
+    25% {transform: translateY(-100%); font-size: 18px; color: #b5c6b1;}
+    50% {transform: translateY(0%); font-size: 19px;}
+    75% {transform: translateY(100%); font-size: 20px; }
+    100%{transform: translateY(0%); font-size: 16px; }
+  }
+  

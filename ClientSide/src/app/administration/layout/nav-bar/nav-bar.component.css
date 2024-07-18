@@ -1,45 +1,40 @@
-/* p {
-    text-align: center;
+.navbar{
+  background-color: #fff;
+  padding: 10px 5px;
 }
 
- */
- .image {
-    margin-left: 10px;
-    margin-top: 0;
-    height:30%;
-    width:400px
-   }
-  
-  
-   .navbar-brand {
-    font-family: "Poetsen One", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-   }
-  
-  .container {
-   border: 1px solid;
-   display: flex;
-   justify-content: space-between;
-   width: 100vw;
-  }
-  
-  .search {
-    margin-top: 30px;
-  }
-  
-  .background {
-    background-color: #e3f2fd;
-  }
-  
-  .input {
-    margin-right: 5px;
-  }
-  
-  .fluid {
-    display: flex;
-  }
+.nav__items{
+  display: flex;
+  gap: 10px;
+}
+.nav__items a {
+  display: inline-block;
+  text-decoration: none;
+  flex: 1;
+  text-wrap: nowrap;
+  padding: 4px 6px;
+  background-color: #f2f2f2;
+  border-radius: 10%;
+}
 
-  select{
-    border: none;
-  }
+.nav__items a:first-child{
+ flex: 0;
+ padding: 4px 10px;
+}
+.nav__items a:visited{
+  background-color: #f2f2f2;
+}
+
+.nav__items a:hover{
+background-color: #e5e5e5;
+}
+
+.nav__items a:active{
+  background-color: black;
+  color: white;
+}
+
+.nav__items a:focus{
+background-color: black;
+color: white;
+}

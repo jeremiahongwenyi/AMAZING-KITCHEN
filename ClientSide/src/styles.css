@@ -1,7 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 @import url('https://fonts.googleapis.com/css2?family=Gentium+Book+Plus:ital,wght@0,400;0,700;1,400;1,700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Gentium+Book+Plus:ital,wght@0,400;0,700;1,400;1,700&family=Poetsen+One&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');/* 
-
+@import url('https://fonts.googleapis.com/css2?family=Gentium+Book+Plus:ital,wght@0,400;0,700;1,400;1,700&family=Poetsen+One&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css');
 
 * ----------------------------
 * Common CSS
@@ -31,7 +31,7 @@ ul{
    margin:0
 }
 
-button,input[type=button]{
+/* button,input[type=button]{
    cursor:pointer
 }
 
@@ -105,7 +105,7 @@ a,a:hover{
 }
 
 /*Layout Css*/
-.section-content-p35{
+/* .section-content-p35{
    padding:0 35px
 }
 
@@ -130,7 +130,7 @@ aside.menu-sidebar.d-none.d-lg-block.clr{
    z-index:99999999;
    height:75px;
    box-shadow:-2px 0 4px #0000003b
-}
+} */
 
 /* 
 * ----------------------------
@@ -138,7 +138,7 @@ aside.menu-sidebar.d-none.d-lg-block.clr{
 * ----------------------------
 */
 
-.header-desktop{
+/* .header-desktop{
    background:#0da8e4;
    -webkit-box-shadow:0 2px 5px 0 rgba(0,0,0,.1);
    -moz-box-shadow:0 2px 5px 0 rgba(0,0,0,.1);
@@ -149,9 +149,9 @@ aside.menu-sidebar.d-none.d-lg-block.clr{
    left:200px;
    height:75px;
    z-index:3
-}
+} */
 
-.header-desktop .section-content{
+/* .header-desktop .section-content{
    overflow:visible;
    position:absolute;
    top:50%;
@@ -162,9 +162,9 @@ aside.menu-sidebar.d-none.d-lg-block.clr{
    -ms-transform:translateY(-50%);
    -o-transform:translateY(-50%);
    transform:translateY(-50%)
-}
+} */
 
-.header-wrap{
+/* .header-wrap{
    display:-webkit-box;
    display:-webkit-flex;
    display:-moz-box;
@@ -193,9 +193,9 @@ aside.menu-sidebar.d-none.d-lg-block.clr{
    -moz-box-align:center;
    -ms-flex-align:center;
    align-items:center
-}
+} */
 
-.number{
+/* .number{
    padding:6px 0
 }
 
@@ -263,9 +263,9 @@ input.au-input.au-input-xl{
    float:left;
    margin-top:7px;
    padding-left:17px
-}
+} */
 
-.total span{
+/* .total span{
    display:inline-block;
    background:#fff;
    padding:0 13px;
@@ -297,9 +297,9 @@ input.au-input.au-input-xl{
 
 .au-btn-submit:hover{
    background:#05143f
-}
+} */
 
-.au-btn-submit>i{
+/* .au-btn-submit>i{
    font-size:20px;
    color:#fff;
    position:absolute;
@@ -310,7 +310,7 @@ input.au-input.au-input-xl{
    -ms-transform:translate(-50%,-50%);
    -o-transform:translate(-50%,-50%);
    transform:translate(-50%,-50%)
-}
+} */
 
 /* 
 * ----------------------------
@@ -318,7 +318,7 @@ input.au-input.au-input-xl{
 * ----------------------------
 */
 
-.menu-sidebar{
+/* .menu-sidebar{
    width:200px;
    position:fixed;
    left:0;
@@ -384,7 +384,7 @@ input.au-input.au-input-xl{
 
 .navbar-sidebar .navbar-list li a:hover{
    color:#0da8e4
-}
+} */
 
 /* 
 * ----------------------------
@@ -392,7 +392,7 @@ input.au-input.au-input-xl{
 * ----------------------------
 */
 
-.header-mobile{
+/* .header-mobile{
    position:absolute;
    top:0;
    left:0;
@@ -400,8 +400,8 @@ input.au-input.au-input-xl{
 }
 .header-mobile .header-mobile-bar{
    padding:15px 0;    background: #fff;
-}
-.header-mobile .header-mobile-inner{
+} */
+/* .header-mobile .header-mobile-inner{
    display:-webkit-box;
    display:-webkit-flex;
    display:-moz-box;
@@ -520,7 +520,7 @@ input.au-input.au-input-xl{
 }
 .main-content.page-m{
    padding: 10% 30% 10% 5%
-}
+} */
 
 /* 
 * ----------------------------
@@ -528,7 +528,7 @@ input.au-input.au-input-xl{
 * ----------------------------
 */
 
-.product-box img {
+/* .product-box img {
    width: 150px;
 }
 
@@ -562,7 +562,7 @@ input.au-input.au-input-xl{
    padding-bottom:0;
    font-weight:500;
    color:#585858
-}
+} */
 
 /* 
 * ----------------------------
@@ -684,7 +684,7 @@ select{
 * ----------------------------
 */
 
-.table{
+/* .table{
    margin:0
 }
 table.table.table-bordered{
@@ -711,7 +711,7 @@ table.table.table-bordered th{
    margin-bottom:10px;
    outline:0;
    margin-left:5px
-}
+} */
 
 /* 
 * ----------------------------
@@ -731,7 +731,7 @@ table.table.table-bordered th{
 
 .detail-img{
    width: 30%;
-}
+} */
 
 /**/
 

@@ -12,21 +12,23 @@
 
 .container{
     /* background:linear-gradient(45deg, blueviolet, lightgreen); */
-    padding:15px 9%;
+    padding:15px 10px;
     padding-bottom: 100px;
+    width: 100%;
+    /* background-color: green; */
 }
 
  .heading{
     text-align: center;
     padding-bottom: 15px;
-    color: rgb(129, 9, 129);
+    color: #444;
     text-shadow: 0 5px 10px rgba(0,0,0,.2);
     font-size: 50px;
 }
 
 .box-container{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+   grid-template-columns: repeat(6, 1fr);
     gap:15px;
 }
 
@@ -35,7 +37,8 @@
     border-radius: 5px;
     background: #fff;
     text-align: center;
-    padding:30px 20px;
+    padding:2px 4px;
+    background: #fff;
 }
 
  .box-container .box img{
