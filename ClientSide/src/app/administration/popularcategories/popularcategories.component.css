@@ -1,0 +1,20 @@
+.large{
+    background-color:#fff;
+    border: 2px solid;
+    display: flex;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+
+.popular_box img{
+    box-sizing: content-box;
+    padding: 10px;
+    margin: 5px;
+    /* border: 1px solid;
+    border-radius: 100%; */
+    /* background-color:#f1f1f1; */
+}
+
+.popular_name{
+    text-align: center;
+}

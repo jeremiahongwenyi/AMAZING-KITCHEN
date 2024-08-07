@@ -17,6 +17,12 @@ import { AdminComponent } from './administration/admin/admin.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { NotFoundComponent } from './administration/not-found/not-found.component';
 import { AdminpracComponent } from './administration/adminprac/adminprac.component';
+import { CartCountService } from './service/cart-count/cart-count.service';
+import { SnackbarComponent } from './administration/snackbar/snackbar.component';
+import { PopularcategoriesComponent } from './administration/popularcategories/popularcategories.component';
+import { NewarrivalsComponent } from './administration/newarrivals/newarrivals.component';
+import { CartComponent } from './administration/cart/cart.component';
+
 
 
 @NgModule({
@@ -33,7 +39,11 @@ import { AdminpracComponent } from './administration/adminprac/adminprac.compone
     NavBarComponent,
     AdminComponent,
     NotFoundComponent,
-    AdminpracComponent
+    AdminpracComponent,
+    SnackbarComponent,
+    PopularcategoriesComponent,
+    NewarrivalsComponent,
+    CartComponent,
 
   ],
   imports: [

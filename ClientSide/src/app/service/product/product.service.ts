@@ -1,15 +1,16 @@
 import { Injectable } from "@angular/core";
-import { Product } from "../Models/product.model";
+import { Product } from "../../Models/product.model";
 import { HttpClient } from "@angular/common/http";
 import { Observable, map } from "rxjs";
+import { CartCountService } from "../cart-count/cart-count.service";
 
 @Injectable({
-    providedIn:'root'
+    providedIn:'root',
 })
 export class ProductService{
 
     constructor(
-        private http:HttpClient
+        private http:HttpClient,
     ){}
 
     // shopProducts:Product[]=[

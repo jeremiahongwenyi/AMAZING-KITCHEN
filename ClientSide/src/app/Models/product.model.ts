@@ -24,8 +24,13 @@
         public image:string,
         public available:number,
         public discount?:number,
+        public productadded?:boolean,
 
       ){}
+
+      // get productAdded(){
+      //   return this.productAdded;
+      // }
 
     }
 

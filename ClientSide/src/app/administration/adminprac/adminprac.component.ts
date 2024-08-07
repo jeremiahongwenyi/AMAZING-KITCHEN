@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AbstractControl,FormArray,FormControl,FormGroup,FormBuilder, Validators } from '@angular/forms';
-import { ProductService } from '../../Services/product.service';
+import { ProductService } from '../../service/product/product.service';
 import { Product } from '../../Models/product.model';
 import { noSpaceValidator, numbersOnlyValidator, passwordValidator } from '../../validators';
 
@@ -124,15 +124,15 @@ initializeItemIdFormControl(){
    console.log(newProduct)
   //  this.productService.shopProducts.push(newProduct)
   //  console.log(this.productService.shopProducts)
-  //  this.productService.storeData(newProduct).subscribe({
-  //   next:(resp)=>{ 
-  //     console.log(resp)
-  //     if(resp.staus===200){
-  //       alert('Product was added successfully')
-  //     }
-  //   }
-  //  }
-   //)
+   this.productService.storeData(newProduct).subscribe({
+    next:(resp)=>{ 
+      console.log(resp)
+      if(resp.staus===200){
+        alert('Product was added successfully')
+      }
+    }
+   }
+   )
   
   }
 

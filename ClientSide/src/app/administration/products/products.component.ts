@@ -1,9 +1,10 @@
 import { Component,OnInit,signal,effect, OnDestroy } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { ProductService } from '../../Services/product.service';
+import { ProductService } from '../../service/product/product.service';
 import { Product } from '../../Models/product.model';
 import { ActivatedRoute } from '@angular/router';
 import { Observable } from 'rxjs';
+import { CartCountService } from '../../service/cart-count/cart-count.service';
 
 
 @Component({
@@ -17,9 +18,10 @@ export class ProductsComponent implements OnInit,OnDestroy {
     private http:HttpClient,
     private productService:ProductService,
     private activatedRoute:ActivatedRoute,
+    private cartCountService:CartCountService,
     
   ){ 
-    effect(()=> {console.log(this.selectedProduct())})
+    // effect(()=> {console.log(this.selectedProduct())})
   }
 
   shopProducts:Product[]=[]
@@ -28,7 +30,8 @@ export class ProductsComponent implements OnInit,OnDestroy {
   selectedItemId:number = 0;
   selectedProductDetail:string='';
   itemsinCart:number=0
-  selectedProduct = signal(null);
+  // selectedProduct = signal(null);
+  selectedProduct:Product;
   subcategory:(string|null) ='';
   observable:any;
   
@@ -69,27 +72,37 @@ export class ProductsComponent implements OnInit,OnDestroy {
   showDetails(data:{itemid:number,itemDesc:string}){
     console.log('hello')
     this.showProductDetail=true;
-    this.selectedItemId = data.itemid
-    console.log(this.selectedProduct)
+    this.selectedItemId = data.itemid;
+    console.log(this.selectedProduct);
     this.selectedProductDetail = data.itemDesc;
   }
 
   hideDetail(action:boolean){
-    console.log(action)
-    this.showProductDetail=action
+    console.log(action);
+    this.showProductDetail=action;
   }
 
-  productContainerClicked(item:any){
-    console.log(item)
-    this.selectedProduct.set(item);
-    console.log(this.selectedProduct)
-    this.showProductDetail= true
+  productContainerClicked(item:Product){
+    console.log(item);
+    // this.selectedProduct.set(item);
+    this.selectedProduct=item;
+    console.log(this.selectedProduct);
+    this.showProductDetail= true;
 
+  }
+
+  addCartCount(item:Product){
+  console.log('working')
+  this.filteredData.forEach((product)=> product.productadded=false);
+  item.productadded=true;
+  setTimeout(()=>{
+    item.productadded=false;
+  },500)
+  this.cartCountService.manageCartCount();
   }
 
 ngOnDestroy(): void {
-    this.observable.unsubscribe()
+    this.observable.unsubscribe();
 }
 
- 
 }

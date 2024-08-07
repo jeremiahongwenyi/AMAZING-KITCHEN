@@ -1,24 +1,34 @@
 
 <app-product-detail *ngIf="showProductDetail"
 (closeProductDetailComponent)="hideDetail($event)"
-[productId]="selectedItemId"
-[productDetail]="selectedProductDetail"
 [selectedProduct]="selectedProduct"></app-product-detail>
 <div class="container">
 
-    <h1 class="heading">Trending Products</h1>
-  
+    <app-popularcategories></app-popularcategories>
+<app-newarrivals></app-newarrivals>
+    <!-- <h1 class="heading">Trending Products</h1> -->
     <div class="box-container">
-  
-        <div class="box"  *ngFor="let item of filteredData" (click)="productContainerClicked(item)">
+        <div class="box"  *ngFor="let item of filteredData"  >
+            <!-- (click)="productContainerClicked(item)" -->
+            
             <!-- <div [ngClass]="{'instock':item.available>itemsinCart,'outofstock':item.available<=itemsinCart}">
                 {{item.available>itemsinCart? 'In Stock': 'Out Of Stock'}}</div> 
                 <span *ngIf="item.available-itemsinCart<=10">{{item.available-itemsinCart}}</span> -->
                 
-            <img src="{{item.image}}" routerLink="/product-details/{{item.itemId}}">
-            <h3>{{item.name}}</h3>
-            <p>Price: Ksh {{item.price.amount}} {{item.price.specification}}</p>
-            <p>{{item.description}}</p>
+            <img src="{{item.image}}" >
+            <!-- routerLink="/product-details/{{item.itemId}}" -->
+            <div class="name">
+                {{item.name}}
+            </div>
+            <div class="price">
+                KSh {{item.price.amount}}
+            </div>
+            <app-snackbar class="snackbar" *ngIf="item.productadded"></app-snackbar>
+
+            <button type="submit" class="button" (click)="addCartCount(item)">ADD TO CART</button>
+          
+            <!-- <p>Price: Ksh  {{item.price.specification}}</p>
+            <p>{{item.description}}</p> -->
            
             <!-- <a routerLink="/product-details/{{item._id}}" class="btn">Add to Cart</a> -->
             
@@ -30,6 +40,7 @@
         </div>
   
     </div>
+
   
   </div>
 

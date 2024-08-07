@@ -7,6 +7,7 @@ import { AdminComponent } from './administration/admin/admin.component';
 import { NotFoundComponent } from './administration/not-found/not-found.component';
 import { ProductDetailComponent } from './administration/product-detail/product-detail.component';
 import { AdminpracComponent } from './administration/adminprac/adminprac.component';
+import { CartComponent } from './administration/cart/cart.component';
 
 const routes: Routes = [
   {path:"",component:ProductsComponent,pathMatch:'full'},
@@ -16,7 +17,8 @@ const routes: Routes = [
   {path:'product/:subcategory', component:ProductsComponent},
   {path:'product-details',component:ProductDetailComponent},
   {path:'admin', component:AdminpracComponent},
-  {path:"**", component:NotFoundComponent}
+  {path:'cart', component:CartComponent},
+  {path:"**", component:NotFoundComponent},
 ];
 
 

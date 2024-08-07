@@ -11,6 +11,7 @@
     </div>
     
   </nav> -->
+ 
 
 <nav  class="navbar">
   <!-- #e3f2fd  #0da8e4-->
@@ -46,8 +47,10 @@
         <button><i class="fas fa-user"></i> Account</button>
       </div>
     
-      <div>
-        <button><i class="fas fa-shopping-cart"></i></button>
+      <div routerLink="/cart">
+        <button><i class="fas fa-shopping-cart" ></i>
+        <span class="cart-count">{{cartCount}}</span>
+        </button>
       </div>
     </div>
   </div>

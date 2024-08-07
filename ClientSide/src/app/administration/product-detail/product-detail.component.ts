@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Output,Input,signal, effect, OnInit } from '@angular/core';
+import { Product } from '../../Models/product.model';
 
 @Component({
   selector: 'app-product-detail',
@@ -7,24 +8,23 @@ import { Component, EventEmitter, Output,Input,signal, effect, OnInit } from '@a
 })
 export class ProductDetailComponent implements OnInit{
 @Input()
-  productId:number = 0
-  @Input() productDetail:string=''
-  @Input() selectedProduct = signal<any>(null)
+  // @Input() selectedProduct = signal<any>(null)
+  @Input() selectedProduct:Product;
   itemsinCart:number=0
 
 
 constructor(){
-  console.log(this.selectedProduct())
-  effect( ()=>{
-    console.log(this.selectedProduct())
-  })
-}
+//   console.log(this.selectedProduct())
+//   effect( ()=>{
+//     console.log(this.selectedProduct())
+//   })
+ }
 
   @Output()
   closeProductDetailComponent = new EventEmitter<boolean>()
 
   ngOnInit(): void {
-      console.log(this.productDetail)
+  
   }
 
   closeProductDetail(){
@@ -32,11 +32,10 @@ constructor(){
   }
 
   increamentCartValue(){
-    if(this.itemsinCart<this.selectedProduct().available){
-      this.itemsinCart++
-    }
-    return
-    
+    // if(this.itemsinCart<this.selectedProduct().available){
+    //   this.itemsinCart++
+    // }
+    // return 
   
   }
 

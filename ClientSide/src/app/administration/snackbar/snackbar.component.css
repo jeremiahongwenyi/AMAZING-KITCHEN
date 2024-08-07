@@ -1,0 +1,9 @@
+.snackbar{
+    /* position: absolute; */
+    display: inline;
+    background-color: green;
+    color: white;
+    top: 100px;
+    /* padding: 20px 50px; */
+    
+}
